@@ -1406,7 +1406,7 @@
   <!-- ============================================================
        NEWSLETTER POPUP MODAL
        ============================================================ -->
-  <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-hidden="true">
+  <div class="popup-overlay is-open" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-hidden="false">
     <div class="popup-box">
       <button class="popup-close" id="popup-close" aria-label="Close newsletter signup">×</button>
       <h2 class="popup-heading" id="popup-title">Welcome!</h2>
@@ -1604,40 +1604,6 @@ function handleContactSubmit(e) {
       els.forEach(function(el) { io.observe(el); });
     })();
   </script>
-<!-- Password Gate -->
-<div id="pwd-gate" style="position: fixed; inset: 0px; background: rgb(14, 48, 56); z-index: 99999; display: none; flex-direction: column; align-items: center; justify-content: center; font-family: sans-serif;">
-  <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:2.5rem 2.5rem;max-width:360px;width:90%;text-align:center;">
-    <p style="color:rgba(255,255,255,0.5);font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 0.75rem;">Private Preview</p>
-    <h2 style="color:#fff;font-size:1.4rem;margin:0 0 1.5rem;font-weight:600;">Enter password to continue</h2>
-    <input id="pwd-input" type="password" placeholder="Password" style="width:100%;box-sizing:border-box;padding:0.8rem 1rem;border-radius:4px;border:1.5px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:#fff;font-size:1rem;margin-bottom:0.75rem;outline:none;">
-    <p id="pwd-error" style="color:#ea4424;font-size:0.85rem;margin:0 0 0.75rem;display:none;">Incorrect password. Try again.</p>
-    <button onclick="checkPassword()" style="width:100%;padding:0.85rem;background:#ea4424;color:#fff;border:none;border-radius:4px;font-size:1rem;font-weight:600;cursor:pointer;letter-spacing:0.05em;text-transform:uppercase;">Enter</button>
-  </div>
-</div>
-<script>
-(function() {
-  if (sessionStorage.getItem('soj_access') !== 'granted') {
-    document.getElementById('pwd-gate').style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-    document.getElementById('pwd-input').addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') checkPassword();
-    });
-  }
-})();
-function checkPassword() {
-  var val = document.getElementById('pwd-input').value;
-  if (val === 'SOJ2026!') {
-    sessionStorage.setItem('soj_access', 'granted');
-    document.getElementById('pwd-gate').style.display = 'none';
-    document.body.style.overflow = '';
-  } else {
-    document.getElementById('pwd-error').style.display = 'block';
-    document.getElementById('pwd-input').value = '';
-    document.getElementById('pwd-input').focus();
-  }
-}
-</script>
-
 
 
 </body></html>
