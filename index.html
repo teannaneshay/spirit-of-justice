@@ -298,14 +298,14 @@
     /* Animated paragraph blocks */
     .mission-para {
       position: relative;
-      padding: 2.25rem 0 2.25rem 1.75rem;
+      padding: 1.25rem 0 1.25rem 1.75rem;
       border-left: 2px solid var(--blue-3, #8ab8c3);
       opacity: 0;
       transform: translateY(28px);
       transition: opacity 0.75s ease, transform 0.75s ease;
     }
     .mission-para + .mission-para {
-      margin-top: 1rem;
+      margin-top: 0.25rem;
     }
     .mission-para.visible {
       opacity: 1;
@@ -1261,16 +1261,16 @@
        ============================================================ -->
   <section class="mission" id="mission" aria-labelledby="mission-heading">
     <div class="mission-inner">
-      <div class="mission-para">
+      <div class="mission-para visible">
         <p class="section-body"><strong>Spirit of Justice</strong> seeks to create the spiritually-grounded communal spaces our movements desperately need today — places where people can process fear and grief, cultivate courage and hope, develop moral clarity, and sustain themselves for the long haul.</p>
       </div>
-      <div class="mission-para">
+      <div class="mission-para visible">
         <p class="section-body">In this moment of converging crises — political, social, and existential — millions of people committed to justice are facing isolation, exhaustion, and a loss of shared meaning, even as the need for courage, resilience, and community has never been greater.</p>
       </div>
-      <div class="mission-para">
+      <div class="mission-para visible">
         <p class="section-body">Spirit of Justice exists to meet this moment by building a spiritual home beyond traditional religion — rooted in connection, practice, and the living tradition of revolutionary love.</p>
       </div>
-      <div class="mission-para">
+      <div class="mission-para visible">
         <p class="section-body">Through thought-provoking podcast dialogues, inspiring community gatherings, and an innovative curriculum at the intersection of spirituality and justice, we aim to cultivate the inner strength, moral clarity, and collective resilience required to sustain liberatory movements — and to transform ourselves as we work to transform the world.</p>
       </div>
       
@@ -1331,7 +1331,6 @@
   <section class="donate-cta" id="donate" aria-labelledby="donate-heading">
     <div class="donate-cta-inner">
       <h2 style="font-family:var(--font-serif);font-weight:700;font-size:clamp(2rem,4vw,3rem);color:var(--blue-6);margin-bottom:1.5rem;letter-spacing:0.01em;text-align:center;padding-bottom:1rem;border-bottom:1px solid rgba(14,48,56,0.2);">Support Our Work</h2>
-            <p style="text-align:center;max-width:100%;margin:0 auto 2rem;">We are currently seeking support for the first phase of our work, which will feature thought-provoking podcast dialogues, inspiring community gatherings, and an innovative curriculum at the intersection of spirituality and justice.</p>
       <p style="text-align:center;max-width:100%;margin:0 auto 2rem;">Your tax-deductible donation will lay the foundation for our spiritual home—a beloved community where people from all backgrounds can deepen their inner lives and strengthen collective purpose.</p>
       <div class="donorbox-wrap">
         <iframe src="https://donorbox.org/embed/help-launch-spirit-of-justice?" name="donorbox" allowpaymentrequest="allowpaymentrequest" seamless="seamless" frameborder="0" scrolling="no" height="900px" width="100%" style="max-width: 500px; min-width: 250px; border: none; display: block; margin: 0px auto; width: 100%; max-height: none !important; height: 618px;" allow="payment" data-donorbox-id="DonorBox-f1">
@@ -1394,7 +1393,7 @@
   <!-- ============================================================
        NEWSLETTER POPUP MODAL
        ============================================================ -->
-  <div class="popup-overlay is-open" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-hidden="false">
+  <div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-hidden="true">
     <div class="popup-box">
       <button class="popup-close" id="popup-close" aria-label="Close newsletter signup">×</button>
       <h2 class="popup-heading" id="popup-title">Welcome to Spirit of Justice</h2>
